@@ -96,7 +96,7 @@ Data_Set2 [,i] <-aggregate(Data_Set1[,i], by = list(Data_Set1$ID_Subject,
 
 names(Data_Set2)[5:ncol(Data_Set2)] <- names(Data_Set1)[5:ncol(Data_Set1)]        
 
-# and the data set is done ready to be saved using write.
+# and the tidy data set is done ready to be saved using write.table
 
 write.table(Data_Set2, file = "Data_Set2.txt", row.names = FALSE)
 
