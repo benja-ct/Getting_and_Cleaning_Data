@@ -7,50 +7,50 @@ output: html_document
 
 # Code Book
 
-## Feature Selection 
+## Description of variables
 
 The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
 
-Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
+Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). Please note that some of the latter variables were coded as 'BodyBody'. We maintain these names from the `features.txt` file and so it appears in the variables list below.
 
 Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
 
 These signals were used to estimate variables of the feature vector for each pattern where '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 
-For the 'features' variables we have filtered by the words "mean" and "std" to select just the variables were these terms were present.
+For the 'features' variables we have filtered by the words "mean" and "std" to select just the columns/variables were these terms were present.
 
-The tidy data sets are formed by the following variables:
+The output data sets are formed by the following variables:
 
-Variable name      | Description
--------------------|------------
-ID_Subject         | Subject ID (1 to 30)
-ID_activity        | Numeric code for type of activity (1 to 6)
-Activity_type      | Description for type of activity
-tBodyAcc-XYZ       | Feature: Time Domain Body Acceleration signal
-tGravityAcc-XYZ    | Feature: Time Domain Gravity Acceleration signal
-tBodyAccJerk-XYZ   | Feature: Time Domain Body Acceleration Jerk signal
-tBodyGyro-XYZ      | Feature: Time Domain Body Gyroscope Acceleration signal
-tBodyGyroJerk-XYZ  | Feature: Time Domain Body Gyroscope Acceleration Jerk signal
-tBodyAccMag        | Feature: Time Domain Body Acceleration signal Euclidean norm
-tGravityAccMag     | Feature: Time Domain Gravity Acceleration signal Euclidean norm
-tBodyAccJerkMag    | Feature: Time Domain Body Acceleration Jerk signal Euclidean norm
-tBodyGyroMag       | Feature: Time Domain Body Gyroscope Acceleration signal Euclidean norm
-tBodyGyroJerkMag   | Feature: Time Domain Body Gyroscope Acceleration Jerk signal Euclidean norm
-fBodyAcc-XYZ       | Feature: Frequency Domain Body Acceleration signal
-fBodyAccJerk-XYZ   | Feature: Frequency Domain Body Acceleration Jerk signal
-fBodyGyro-XYZ      | Feature: Frequency Domain Body Gyroscope Acceleration signal
-fBodyAccMag        | Feature: Frequency Domain Body Acceleration signal Euclidean norm
-fBodyAccJerkMag    | Feature: Frequency Domain Body Acceleration Jerk signal Euclidean norm
-fBodyGyroMag       | Feature: Frequency Domain Body Gyroscope Acceleration signal Euclidean norm
-fBodyGyroJerkMag   | Feature: Frequency Domain Body Gyroscope Acceleration Jerk signal Euclidean norm
+Variable name          | Description (Range of possible values)
+-----------------------|----------------------------------------------------------------------------------------------
+ID_Subject             | Subject ID (1 to 30)
+ID_activity            | Numeric code for type of activity (1 to 6)
+Activity_type          | Description for type of activity (-1 to +1)
+tBodyAcc-XYZ           | Feature: Time Domain Body Acceleration signal (-1 to +1)
+tGravityAcc-XYZ        | Feature: Time Domain Gravity Acceleration signal (-1 to +1)
+tBodyAccJerk-XYZ       | Feature: Time Domain Body Acceleration Jerk signal (-1 to +1)
+tBodyGyro-XYZ          | Feature: Time Domain Body Gyroscope Acceleration signal (-1 to +1)
+tBodyGyroJerk-XYZ      | Feature: Time Domain Body Gyroscope Acceleration Jerk signal (-1 to +1)
+tBodyAccMag            | Feature: Time Domain Body Acceleration signal Euclidean norm (-1 to +1)
+tGravityAccMag         | Feature: Time Domain Gravity Acceleration signal Euclidean norm (-1 to +1)
+tBodyAccJerkMag        | Feature: Time Domain Body Acceleration Jerk signal Euclidean norm (-1 to +1)
+tBodyGyroMag           | Feature: Time Domain Body Gyroscope Acceleration signal Euclidean norm (-1 to +1)
+tBodyGyroJerkMag       | Feature: Time Domain Body Gyroscope Acceleration Jerk signal Euclidean norm (-1 to +1)
+fBodyAcc-XYZ           | Feature: Frequency Domain Body Acceleration signal (-1 to +1)
+fBodyAccJerk-XYZ       | Feature: Frequency Domain Body Acceleration Jerk signal (-1 to +1)
+fBodyGyro-XYZ          | Feature: Frequency Domain Body Gyroscope Acceleration signal (-1 to +1)
+fBodyAccMag            | Feature: Frequency Domain Body Acceleration signal Euclidean norm (-1 to +1)
+fBodyBodyAccJerkMag    | Feature: Frequency Domain Body Acceleration Jerk signal Euclidean norm (-1 to +1)
+fBodyBodyGyroMag       | Feature: Frequency Domain Body Gyroscope Acceleration signal Euclidean norm (-1 to +1)
+fBodyBodyGyroJerkMag   | Feature: Frequency Domain Body Gyroscope Acceleration Jerk signal Euclidean norm (-1 to +1)
 
-The set of variables that were estimated from these signals are: 
+The set of measures that were estimated from these signals and which give form to the variables in the data set are: 
 
 - mean(): Mean value
 - std(): Standard deviation
 - meanFreq(): Weighted average of the frequency components to obtain a mean frequency
 
-There is a total of 82 variables in each of the tidy data sets produce by the script.
+There is a total of 82 variables in each of the tidy data sets produced by the script.
 
 
 ## Data Structure
